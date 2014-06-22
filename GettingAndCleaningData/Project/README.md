@@ -14,3 +14,15 @@ How to use the script:
 * Extract the zip file obtained from the above address
 * Copy file "run_analysis.R" to the folder "UCI HAR Dataset" contained in the zip file
 * Run the script, the end result will be a csv file named "measureMeansBySubjAct.txt"
+
+The script works as follows:
+
+* Read data from test set (folder "test") for measurements ("X_test.txt"), subject numbers ("subject_test.txt") and activities ("Y_test.txt"); add column names; combine columns
+* Repeat above step for training data
+* Combine training and test data to one dataset
+* Extract only data on the means and standard deviations of measurements
+* Substitute activity codes with names from file "activity_labels.txt"
+* Based on this data, create a set with values averaged by subject and activity
+* Create csv file
+
+For more details refer to the script file
